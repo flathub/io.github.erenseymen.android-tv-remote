@@ -20,17 +20,6 @@ build-options:
     PYTHONNOUSERSITE: "1"
 
 modules:
-  # Android Platform Tools (adb) - x86_64 only
-  - name: android-tools
-    buildsystem: simple
-    build-commands:
-      - install -Dm755 platform-tools/adb /app/bin/adb
-    sources:
-      - type: archive
-        url: https://dl.google.com/android/repository/platform-tools_r35.0.2-linux.zip
-        sha256: acfdcccb123a8718c46c46c059b2f621140194e5ec1ac9d81715be3d6ab6cd0a
-        strip-components: 0
-
   # scrcpy-server (pre-built, Java bytecode - architecture agnostic)
   - name: scrcpy-server
     buildsystem: simple
@@ -61,4 +50,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/erenseymen/android-tv-remote.git
-        tag: v1.1.2
+        tag: v1.1.3
